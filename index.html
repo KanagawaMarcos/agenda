@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="config.css">
     <link rel="stylesheet" type="text/css" media="screen" href="read-delete.css">
     <link rel="stylesheet" type="text/css" media="screen" href="footer.css">
+    
+    <script src="Contact.js"></script>
     <script src="main.js"></script>
 </head>
 <body>
@@ -24,7 +26,25 @@
             <h3 class="owner-data__number">+55 (98) 9 9975-0189</h3>
         </div>
     </header>
-    <main class="contacts">
+    <form action="" id="contact-form" method="POST">
+        
+        <input type="text" name="name" id="input-name">
+        <input type="number" name="number" id="input-number">
+        <input type="email" name="email" id="input-email">
+
+        <button type="submit">
+            Adicionar Contato
+        </button>
+    </form>
+    <form action="" id="search-form" method="POST">
+        
+        <input type="text" name="search" id="input-search">
+
+        <button type="submit">
+            Buscar
+        </button>
+    </form>
+    <main class="contacts-">
         <section class="contacts__group">
                 <ol>
                     <li>Adriano Almeida</li>

@@ -13,6 +13,7 @@ ul, ol{
 body {
     display: grid;
     display: -moz-grid;
+    
 }
 /*----------Fim Layout geral----------*/
 
