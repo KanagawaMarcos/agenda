@@ -1,0 +1,12 @@
+/*---------------Footer---------------*/
+.footer-nav ul{
+    grid-area: footer;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    padding: 0;
+}
+.footer-nav ul > li{
+    margin: 0 auto;
+}
+/*----------Fim Footer---------------*/

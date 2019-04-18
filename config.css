@@ -1,0 +1,9 @@
+/*-----------Configurações------------*/
+*{
+    font-family: 'Roboto', sans-serif; /* Adicionar Roboto fallback local. */
+}
+
+ul, ol{
+    list-style: none;
+}
+/*--------Fim Configurações-----------*/

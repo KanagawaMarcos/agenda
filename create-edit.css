@@ -1,0 +1,26 @@
+/*-----------Configurações------------*/
+*{
+    font-family: 'Roboto', sans-serif; /* Adicionar Roboto fallback local. */
+}
+
+ul, ol{
+    list-style: none;
+}
+/*--------Fim Configurações-----------*/
+
+
+/*-----------Layout geral-------------*/
+/*----------Fim Layout geral----------*/
+
+/*---------------Footer---------------*/
+.footer-nav ul{
+    grid-area: footer;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    padding: 0;
+}
+.footer-nav ul > li{
+    margin: 0 auto;
+}
+/*----------Fim Footer---------------*/

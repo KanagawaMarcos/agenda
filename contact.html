@@ -6,38 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Agenda - Black Swan</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" type="text/css" media="screen" href="config.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="read-delete.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="create-edit.css">
     <link rel="stylesheet" type="text/css" media="screen" href="footer.css">
     <script src="main.js"></script>
 </head>
 <body>
     <header class="header">
-        <div class="call-to-action">
+        <nav>
+            <button><=</button>
             <h1>Contatos</h1>
-            <button>+</button>
-        </div>
-        <div class="owner-data">
+        </nav>
+        <div class="contact-data">
             <img class="owner-data__image" src="" alt="">
-            <h2 class="owner-data__name">Marcos Costa</h2>
-            <h3 class="owner-data__number">+55 (98) 9 9975-0189</h3>
+            <input type="text" name="nome" id="input-nome">
+            <input type="number" name="numero" id="input-numero">
         </div>
     </header>
-    <main class="contacts">
-        <section class="contacts__group">
-                <ol>
-                    <li>Adriano Almeida</li>
-                    <li>Ana Lúcia</li>
-                </ol>
-            </section>
-            <section>
-                <ol>
-                    <li>Benjamin</li>
-                    <li>Bruno Gustavo</li>
-                </ol>
-            </section>
-    </main>
+    <main><button>Salvar Contato</button></main>
     <footer>
         <nav class="footer-nav">
             <ul>
