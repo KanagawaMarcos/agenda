@@ -10,6 +10,10 @@ ul, ol{
 
 
 /*-----------Layout geral-------------*/
+body {
+    display: grid;
+    display: -moz-grid;
+}
 /*----------Fim Layout geral----------*/
 
 /*---------------Footer---------------*/
