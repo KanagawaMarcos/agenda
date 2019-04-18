@@ -1,6 +1,7 @@
 <!doctype <!DOCTYPE html>
 <html>
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Agenda - Black Swan</title>
@@ -9,19 +10,19 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <header>
-        <div>
+    <header class="header">
+        <div class="call-to-action">
             <h1>Contatos</h1>
             <button>+</button>
         </div>
-        <div>
-            <img src="" alt="">
-            <h2>Marcos Costa</h2>
-            <h3 class="text-muted">+55 (98) 9 9975-0189</h3>
+        <div class="owner-data">
+            <img class="owner-data__image" src="" alt="">
+            <h2 class="owner-data__name">Marcos Costa</h2>
+            <h3 class="owner-data__number">+55 (98) 9 9975-0189</h3>
         </div>
     </header>
-    <main>
-        <section>
+    <main class="contacts">
+        <section class="contacts__group">
                 <ol>
                     <li>Adriano Almeida</li>
                     <li>Ana Lúcia</li>
@@ -35,7 +36,7 @@
             </section>
     </main>
     <footer>
-        <nav>
+        <nav class="footer-nav">
             <ul>
                 <li>
                     <button>favoritos</button>
@@ -54,7 +55,9 @@
                     </button>
                 </li>
                 <li>
-                    sms
+                    <button>
+                        sms
+                    </button>
                 </li>
             </ul>
         </nav>

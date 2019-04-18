@@ -1,0 +1,77 @@
+/*-----------Configurações------------*/
+*{
+    font-family: 'Roboto', sans-serif; /* Adicionar Roboto fallback local. */
+}
+
+ul, ol{
+    list-style: none;
+}
+/*--------Fim Configurações-----------*/
+
+/*-----------Layout geral-------------*/
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "contacts"
+    "footer";
+    grid-template-rows: 4.5fr 4.5fr 1fr;
+}
+/*----------Fim Layout geral----------*/
+
+/*---------------Header---------------*/
+.header{
+    grid-area: header;
+    display: grid;
+    display: -moz-grid;
+    display: -ms-inline-grid;
+    grid-template-areas: 
+    "call-to-action"
+    "owner-data";
+}
+.call-to-action{
+    grid-area: call-to-action;
+
+    display: grid;
+    display: -moz-grid;
+    display: -ms-inline-grid;
+    grid-template-columns: 3fr 1fr;
+}
+.owner-data{
+    grid-area: owner-data;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-direction: column;
+}
+/*-----------Fim Header---------------*/
+
+
+/*---------------Main-----------------*/
+.contacts{
+    grid-area: contacts;
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction: column;
+}
+.contacts__group{
+    margin: .4rem 0;
+}
+/*-------------Fim Main---------------*/
+
+
+/*---------------Footer---------------*/
+.footer-nav ul{
+    grid-area: footer;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    padding: 0;
+}
+.footer-nav ul > li{
+    margin: 0 auto;
+}
+/*----------Fim Footer---------------*/
+
