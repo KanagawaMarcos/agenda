@@ -54,7 +54,7 @@ class ContactList {
     }
     search(input){
         if(this.contacts.length){
-            search_results = this.contacts.filter((contact)=> contact.name.toLowerCase() == input.toLowerCase());
+            search_results = this.contacts.filter((contact)=> contact.name.toLowerCase() === input.toLowerCase());
         }
     }
 

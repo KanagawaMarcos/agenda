@@ -1,89 +1,83 @@
-<!doctype <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Agenda - Black Swan</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Agenda - Black Swan</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="config.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="read-delete.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="footer.css">
-    
-    <script src="Contact.js"></script>
-    <script src="main.js"></script>
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
 </head>
 <body>
-    <header class="header">
-        <div class="call-to-action">
-            <h1>Contatos</h1>
-            <button>+</button>
-        </div>
-        <div class="owner-data">
-            <img class="owner-data__image" src="" alt="">
-            <h2 class="owner-data__name">Marcos Costa</h2>
-            <h3 class="owner-data__number">+55 (98) 9 9975-0189</h3>
-        </div>
-    </header>
-    <form action="" id="contact-form" method="POST">
-        
-        <input type="text" name="name" id="input-name">
-        <input type="number" name="number" id="input-number">
-        <input type="email" name="email" id="input-email">
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Black Swan</a>
+    </div>
+  </nav>
 
-        <button type="submit">
-            Adicionar Contato
-        </button>
-    </form>
-    <form action="" id="search-form" method="POST">
-        
-        <input type="text" name="search" id="input-search">
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center blue-text">Contatos</h1>
+      <div class="row">
+          <form class="col s6" action="" id="contact-form" method="POST">
+            <div class="row">
+                <div class="input-field col s10">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input name="name" id="icon_prefix" type="text" class="validate">
+                    <label for="icon_prefix">Nome Completo</label>
+                  </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s10">
+                    <i class="material-icons prefix">email</i>
+                    <input number="email" id="icon_telephone" type="email" class="validate">
+                    <label for="icon_telephone">Email</label>
+                  </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s10">
+                    <i class="material-icons prefix">phone</i>
+                    <input class="number" id="icon_telephone" type="tel" class="validate">
+                    <label for="icon_telephone">Telefone</label>
+                  </div>
+            </div>
+            <div class="row">
+                <button class="btn waves-effect waves-light" type="submit" name="action">Criar Contato
+                  <i class="material-icons right">send</i>
+                </button>
+            </div>
+          </form>
+        <div class="row col s6">
+            <form action="" id="search-form" method="POST">
+              <div class="input-field">
+                <i class="material-icons prefix">search</i>
+                <input name="search" id="input-search" type="text">
+                <label for="icon_telephone">Pesquisar</label>
+              </div>          
+            </form>
+          <div class="collection">
+            <a href="#!" class="collection-item"><span class="badge">1</span>Alan</a>
+            <a href="#!" class="collection-item"><span class="new badge">4</span>Alan</a>
+            <a href="#!" class="collection-item">Alan</a>
+            <a href="#!" class="collection-item"><span class="badge">14</span>Alan</a>
+          </div>
+        </div>
+      </div>
+      <br><br>
 
-        <button type="submit">
-            Buscar
-        </button>
-    </form>
-    <main class="contacts-">
-        <section class="contacts__group">
-                <ol>
-                    <li>Adriano Almeida</li>
-                    <li>Ana Lúcia</li>
-                </ol>
-            </section>
-            <section>
-                <ol>
-                    <li>Benjamin</li>
-                    <li>Bruno Gustavo</li>
-                </ol>
-            </section>
-    </main>
-    <footer>
-        <nav class="footer-nav">
-            <ul>
-                <li>
-                    <button>favoritos</button>
-                </li>
-                <li>
-                    <button>recentes</button>
-                </li>
-                <li>
-                    <button>
-                        agenda
-                    </button>
-                </li>
-                <li>
-                    <button>
-                        discar
-                    </button>
-                </li>
-                <li>
-                    <button>
-                        sms
-                    </button>
-                </li>
-            </ul>
-        </nav>
-    </footer>
-</body>
+    </div>
+  </div>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  <script src="Contact.js"></script>
+  <script src="main.js"></script>
+
+  </body>
 </html>
