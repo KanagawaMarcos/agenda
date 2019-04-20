@@ -35,14 +35,14 @@
             <div class="row">
                 <div class="input-field col s10">
                   <i class="material-icons prefix">email</i>
-                  <input name="email" id="icon_telephone" type="email" class="validate" required>
-                  <label for="icon_telephone">Email</label>
+                  <input name="email" id="icon_email" type="email" class="validate" required>
+                  <label for="icon_email">Email</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s10">
                   <i class="material-icons prefix">phone</i>
-                  <input name="phone" id="icon_telephone" type="tel" class="validate" required>
+                  <input name="phone" id="icon_telephone" type="text" class="validate phone" required pattern="/^(?:\+)[0-9]{2}\s?(?:\()[0-9]{2}(?:\))\s?[0-9]{4,5}(?:-)[0-9]{4}$/" >
                   <label for="icon_telephone">Telefone</label>
                 </div>
             </div>
@@ -87,7 +87,7 @@
                   <div class="row">
                       <div class="input-field col s12">
                         <i class="material-icons prefix">phone</i>
-                        <input onkeyup="enable_submit_edit()" value="<%= contacts[i].phone %>" name="phone" id="phone_update" type="tel" class="validate" required>
+                        <input onkeyup="enable_submit_edit()" value="<%= contacts[i].phone %>" name="phone" id="phone_update" type="tel" class="validate phone" required>
                         <label for="phone_update">Telefone</label>
                       </div>
                   </div>                  
