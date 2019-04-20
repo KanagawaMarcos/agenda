@@ -24,7 +24,7 @@
       
       <h1 class="header center blue-text"><%= title %></h1>
       <div class="row">
-          <form class="col s6" action="/create" id="contact-form" method="POST">
+          <form class="col s12 m6" action="/create" id="contact-form" method="POST">
             <div class="row">
                 <div class="input-field col s10">
                   <i class="material-icons prefix">account_circle</i>
@@ -52,7 +52,7 @@
                 </button>
             </div>
           </form>
-          <div class="row col s6">
+          <div class="row col s12 m6">
             <form action="" id="search-form" method="POST">
               <div class="input-field">
                 <i class="material-icons prefix">search</i>
@@ -60,7 +60,7 @@
                 <label for="input-search">Pesquisar</label>
               </div>          
             </form>
-          <ul class="collapsible">
+            <ul class="collapsible">
             <% for(let i = 0; i < contacts.length ; i++) {%>
             <li>
               <div class="collapsible-header">
@@ -68,38 +68,30 @@
                 <%= contacts[i].name %>
               </div>
               <div class="collapsible-body">
-                <form method="POST" action="/update">
+                <form  method="POST" action="/update">
+                  <input type="text" name="id" value="<%= contacts[i]._id %>" hidden>
                   <div class="row">
-                      <div class="input-field col s10">
+                      <div class="input-field col s12">
                         <i class="material-icons prefix">account_circle</i>
-                        <input value="<%= contacts[i].phone %>" name="name" id="nome_update" type="text" class="validate" required disabled>
+                        <input onkeyup="enable_submit_edit()" value="<%= contacts[i].name %>" name="name" id="nome_update" type="text" class="validate" required>
                         <label for="nome_update">Nome</label>
                       </div>
-                      <div class="input-field col s2">
-                          <button class="btn-flat red-text" type="submit" name="action">Editar</button>
-                      </div>
                   </div>
                   <div class="row">
-                      <div class="input-field col s10">
+                      <div class="input-field col s12">
                         <i class="material-icons prefix">email</i>
-                        <input value="<%= contacts[i].email %>" name="email" id="email_update" type="email" class="validate" required disabled>
+                        <input onkeyup="enable_submit_edit()" value="<%= contacts[i].email %>" name="email" id="email_update" type="email" class="validate" required>
                         <label for="email_update">Email</label>
                       </div>
-                      <div class="input-field col s2">
-                          <button class="btn-flat red-text" type="submit" name="action">Editar</button>
-                      </div>
                   </div>
                   <div class="row">
-                      <div class="input-field col s10">
+                      <div class="input-field col s12">
                         <i class="material-icons prefix">phone</i>
-                        <input value="<%= contacts[i].phone %>" name="phone" id="phone_update" type="tel" class="validate" required disabled>
+                        <input onkeyup="enable_submit_edit()" value="<%= contacts[i].phone %>" name="phone" id="phone_update" type="tel" class="validate" required>
                         <label for="phone_update">Telefone</label>
                       </div>
-                      <div class="input-field col s2">
-                          <button class="btn-flat red-text" type="submit" name="action">Editar</button>
-                      </div>
                   </div>                  
-                  <button class="btn waves-effect waves-light" type="submit" name="action">Salvar</button>
+                  <button id="submit_edit" class="btn waves-effect waves-light disabled" type="submit" name="action">Salvar Edições</button>
                 </form>
                 <div class="row center">
                     <form action="/delete" method="POST" >
@@ -124,12 +116,16 @@
   <script src="javascripts/materialize/materialize.js"></script>
   <script src="javascripts/materialize/init.js"></script>
 
-  <script src="javascripts/Contact.js"></script>
-  <script src="javascripts/main.js"></script>
-  <script>
+  <script defer>
+    //Ativa o component de collapsible da lista de contatos
     $(document).ready(function(){
       $('.collapsible').collapsible();
     });
+
+    // Função para ativar botão de editar caso o input mude.
+    function enable_submit_edit (){
+      document.querySelector('#submit_edit').classList.remove('disabled');
+    }
         
   </script>
   </body>
