@@ -27,24 +27,24 @@
           <form class="col s6" action="/create" id="contact-form" method="POST">
             <div class="row">
                 <div class="input-field col s10">
-                    <i class="material-icons prefix">account_circle</i>
-                    <input name="name" id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix">Nome Completo</label>
-                  </div>
+                  <i class="material-icons prefix">account_circle</i>
+                  <input name="name" id="icon_prefix" type="text" class="validate" required>
+                  <label for="icon_prefix">Nome Completo</label>
+                </div>
             </div>
             <div class="row">
                 <div class="input-field col s10">
-                    <i class="material-icons prefix">email</i>
-                    <input name="email" id="icon_telephone" type="email" class="validate">
-                    <label for="icon_telephone">Email</label>
-                  </div>
+                  <i class="material-icons prefix">email</i>
+                  <input name="email" id="icon_telephone" type="email" class="validate" required>
+                  <label for="icon_telephone">Email</label>
+                </div>
             </div>
             <div class="row">
                 <div class="input-field col s10">
-                    <i class="material-icons prefix">phone</i>
-                    <input name="phone" id="icon_telephone" type="tel" class="validate">
-                    <label for="icon_telephone">Telefone</label>
-                  </div>
+                  <i class="material-icons prefix">phone</i>
+                  <input name="phone" id="icon_telephone" type="tel" class="validate" required>
+                  <label for="icon_telephone">Telefone</label>
+                </div>
             </div>
             <div class="row">
                 <button class="btn waves-effect waves-light" type="submit" name="action">Criar Contato
@@ -52,12 +52,12 @@
                 </button>
             </div>
           </form>
-        <div class="row col s6">
+          <div class="row col s6">
             <form action="" id="search-form" method="POST">
               <div class="input-field">
                 <i class="material-icons prefix">search</i>
                 <input name="search" id="input-search" type="text">
-                <label for="icon_telephone">Pesquisar</label>
+                <label for="input-search">Pesquisar</label>
               </div>          
             </form>
           <ul class="collapsible">
@@ -68,17 +68,45 @@
                 <%= contacts[i].name %>
               </div>
               <div class="collapsible-body">
-                <p>
-                  <%= contacts[i].phone %>
-                  <br>
-                  <%= contacts[i].email %>
-                </p>
-                <form action="/delete" method="POST">
-                  <input type="text" name="id" value="<%= contacts[i]._id %>" hidden>
-                  <button class="btn-flat red-text" type="submit" name="action">Excluir
-                  </button>
+                <form method="POST" action="/update">
+                  <div class="row">
+                      <div class="input-field col s10">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input value="<%= contacts[i].phone %>" name="name" id="nome_update" type="text" class="validate" required disabled>
+                        <label for="nome_update">Nome</label>
+                      </div>
+                      <div class="input-field col s2">
+                          <button class="btn-flat red-text" type="submit" name="action">Editar</button>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="input-field col s10">
+                        <i class="material-icons prefix">email</i>
+                        <input value="<%= contacts[i].email %>" name="email" id="email_update" type="email" class="validate" required disabled>
+                        <label for="email_update">Email</label>
+                      </div>
+                      <div class="input-field col s2">
+                          <button class="btn-flat red-text" type="submit" name="action">Editar</button>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="input-field col s10">
+                        <i class="material-icons prefix">phone</i>
+                        <input value="<%= contacts[i].phone %>" name="phone" id="phone_update" type="tel" class="validate" required disabled>
+                        <label for="phone_update">Telefone</label>
+                      </div>
+                      <div class="input-field col s2">
+                          <button class="btn-flat red-text" type="submit" name="action">Editar</button>
+                      </div>
+                  </div>                  
+                  <button class="btn waves-effect waves-light" type="submit" name="action">Salvar</button>
                 </form>
-                        
+                <div class="row center">
+                    <form action="/delete" method="POST" >
+                      <input type="text" name="id" value="<%= contacts[i]._id %>" hidden>
+                      <button class="btn-flat red-text" type="submit" name="action">Excluir Contato</button>
+                    </form>
+                </div>
               </div>
             </li>
             <% } %>
